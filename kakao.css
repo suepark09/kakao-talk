@@ -1,0 +1,130 @@
+/* CSS files add styling rules to your content */
+
+h1 {
+  color: red; 
+}
+
+body {
+background: #1c1b1b;
+font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: grid; 
+  padding-top: 30px; 
+  width: 412px;
+  margin-top: 40px; 
+  margin: 0 auto; 
+  
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #96a2a8; 
+  height: 55px;
+  display: grid;
+  grid-template-columns: 42px 1fr 42px 42px;
+  background-color: #b5cadd;
+}
+
+.search-icon {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+.arrow-icon {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+.chat-name {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+font-weight: 700;
+}
+
+.menu-icon {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+.chat-window {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  height: 636px; 
+  padding: 8px; 
+  background-color: #b5cadd;
+}
+
+.box3 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  height: 46px; 
+  display: grid;
+  grid-template-columns: 42px 1fr 70px 70px 42px;
+  background-color: white; 
+}
+
+.add-icon {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+.text-box {
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+.text-input {
+border: none; 
+height: 80%; 
+font-size: 12pt;  
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button {
+  
+ padding: 14px; 
+align-items: center; 
+display: grid; 
+}
+
+.button-div {
+border: solid;
+border-color: red; 
+width: 60px; 
+  display: grid;
+} 
+
+.smile-icon {
+border: solid;
+border-color: blue;
+padding: 11px; 
+align-items: center; 
+display: grid; 
+}
+
+ul {
+list-style-type: none;
+}
+
+li {
+  border-radius: 5px; 
+  background-color: #f9ed55;
+  padding: 10px;
+  padding-right: 20px;
+  margin-top: 10px; 
+  text-align: right;
+}
