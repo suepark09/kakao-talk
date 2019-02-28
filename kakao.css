@@ -107,8 +107,6 @@ display: grid;
 }
 
 .button-div {
-border: solid;
-border-color: red; 
 width: 60px; 
   display: grid;
 } 
