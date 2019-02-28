@@ -1,3 +1,4 @@
+console.log('hello wurldddd')
 var kakaoTalk = {
   chatbox: [],
 addchat: function(kakaoText) {
