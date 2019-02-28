@@ -1,12 +1,10 @@
-console.log('hello wurldddd')
 var kakaoTalk = {
   chatbox: [],
-addchat: function(kakaoText) {
-this.chatbox.push(
-  {
-    kakaoText: kakaoText
-  });
-}
+  addchat: function (kakaoText) {
+    this.chatbox.push({
+      kakaoText: kakaoText
+    });
+  }
 };
 
 // document.getElementById("addchat-text-input").addEventListener("keydown", function(e) {
@@ -17,35 +15,34 @@ this.chatbox.push(
 //     if (e.keyCode == 13) { kakaoTalk.displayChat(); }
 // }, false);
 
-
+var addChatTextInput = document.getElementById('addchat-text-input');
 
 var handlers = {
-displayChat: function() {
-kakaoTalk.displayChat(); 
-},
-addchat: function() {
-var addChatTextInput = document.getElementById('addchat-text-input'); 
-addChatTextInput.addEventListener("keyup", function(event) {
-if (event.keyCode === 13) {
-event.preventDefault();
-document.getElementById('submit-btn').click(); 
-}                                  
-});
-kakaoTalk.addchat(addChatTextInput.value);
-addChatTextInput.value = ''; 
-view.displayChat(); 
-}
+  displayChat: function () {
+    kakaoTalk.displayChat();
+  },
+  addchat: function () {
+    kakaoTalk.addchat(addChatTextInput.value);
+    addChatTextInput.value = '';
+    view.displayChat();
+  }
 };
 
-var view = {
-displayChat: function() {
-var chatUl = document.querySelector('ul');
-chatUl.innerHTML = ''; 
-for(var i = 0; i < kakaoTalk.chatbox.length; i++) {
-var chatLi = document.createElement('li');
-chatLi.textContent = kakaoTalk.chatbox[i].kakaoText; 
-chatUl.appendChild(chatLi); 
-}
-}
+addChatTextInput.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    handlers.addchat();
+  }
+});
 
+var view = {
+  displayChat: function () {
+    var chatUl = document.querySelector('ul');
+    chatUl.innerHTML = '';
+    for (var i = 0; i < kakaoTalk.chatbox.length; i++) {
+      var chatLi = document.createElement('li');
+      chatLi.textContent = kakaoTalk.chatbox[i].kakaoText;
+      chatUl.appendChild(chatLi);
+    }
+  }
 }

@@ -60,7 +60,12 @@ display: grid;
   grid-column-end: 6;
   height: 636px; 
   padding: 8px; 
+  padding-right: 20px; 
   background-color: #b5cadd;
+}
+
+.chat-window ul > li {
+  clear: right;
 }
 
 .box3 {
@@ -127,4 +132,6 @@ li {
   padding-right: 20px;
   margin-top: 10px; 
   text-align: right;
+  display: inline-block;  
+  float: right; 
 }
