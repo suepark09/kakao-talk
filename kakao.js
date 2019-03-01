@@ -43,6 +43,11 @@ var view = {
       var chatLi = document.createElement('li');
       chatLi.textContent = kakaoTalk.chatbox[i].kakaoText;
       chatUl.appendChild(chatLi);
+      document.querySelector('li');
+      chatUl.scrollTop = chatUl.scrollHeight;
     }
   }
 }
+
+
+console.log('meh');

@@ -55,16 +55,17 @@ align-items: center;
 display: grid; 
 }
 
-.chat-window {
+#chat-window {
   grid-column-start: 1;
   grid-column-end: 6;
   height: 636px; 
   padding: 8px; 
   padding-right: 20px; 
   background-color: #b5cadd;
+  overflow-y:scroll;
 }
 
-.chat-window ul > li {
+#chat-window ul > li {
   clear: right;
 }
 
@@ -133,3 +134,4 @@ li {
   display: inline-block;  
   float: right; 
 }
+
