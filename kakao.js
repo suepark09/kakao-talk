@@ -32,8 +32,12 @@ addChatTextInput.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     handlers.addchat();
+    var $chat = $("#chat-window");
+    $chat.scrollTop($chat.height());
   }
 });
+
+
 
 var view = {
   displayChat: function () {
@@ -44,10 +48,14 @@ var view = {
       chatLi.textContent = kakaoTalk.chatbox[i].kakaoText;
       chatUl.appendChild(chatLi);
       document.querySelector('li');
-      chatUl.scrollTop = chatUl.scrollHeight;
+      // chatUl.scrollTop = chatUl.scrollHeight;
     }
   }
 }
 
+// if there is no text, dont print a bubble
 
-console.log('meh');
+// if (addChatTextInput === 0) {
+// return false; 
+
+// }
