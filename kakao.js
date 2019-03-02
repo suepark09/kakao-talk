@@ -1,5 +1,3 @@
-console.log("munny is kewl ^^");
-
 var kakaoTalk = {
   chatbox: [],
   addchat: function (kakaoText) {
