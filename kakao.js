@@ -1,3 +1,5 @@
+console.log('mehhh');
+
 var kakaoTalk = {
   chatbox: [],
   addchat: function (kakaoText) {
@@ -16,6 +18,7 @@ var kakaoTalk = {
 // }, false);
 
 var addChatTextInput = document.getElementById('addchat-text-input');
+var addChatButton = document.getElementById('submit-btn"');
 
 var handlers = {
   displayChat: function () {
@@ -34,6 +37,9 @@ addChatTextInput.addEventListener("keyup", function (event) {
     handlers.addchat();
     var $chat = $("#chat-window");
     $chat.scrollTop($chat.height());
+  } else if (addChatTextInput.value.length === 0) {    //added this piece of code
+    addChatButton.disabled = true;
+    console.log('button disabled');
   }
 });
 
