@@ -1,4 +1,3 @@
-console.log('mehhh');
 
 var kakaoTalk = {
   chatbox: [],
@@ -51,8 +50,12 @@ var view = {
     chatUl.innerHTML = '';
     for (var i = 0; i < kakaoTalk.chatbox.length; i++) {
       var chatLi = document.createElement('li');
+      var chatTail = document.createElement('div');   // attempting to add chat tail 
+      div.style.width = "10px";
+      div.style.height = "10px";
+      div.style.background = "red";
       chatLi.textContent = kakaoTalk.chatbox[i].kakaoText;
-      chatUl.appendChild(chatLi);
+      chatUl.appendChild(chatLi[,chatTail]);
       document.querySelector('li');
       // chatUl.scrollTop = chatUl.scrollHeight;
     }
