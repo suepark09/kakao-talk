@@ -1,4 +1,4 @@
-
+console.log('hello');
 var kakaoTalk = {
   chatbox: [],
   addchat: function (kakaoText) {
